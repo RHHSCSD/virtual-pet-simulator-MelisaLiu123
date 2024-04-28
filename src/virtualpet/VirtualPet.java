@@ -25,10 +25,10 @@ public class VirtualPet {
           //login system
           System.out.println("------------------------------------------------------");
           System.out.println("\nUsername: ");
-          String username = kb.next();
+          String username = kb.nextLine();
           System.out.println("\nPassword: ");
-          String password = kb.next();
-          System.out.println("------------------------------------------------------\n");
+          String password = kb.nextLine();
+          System.out.println("\n------------------------------------------------------");
           if (username.equals("snoopy") && password.equals("toto")){
           
           //if correct
@@ -36,14 +36,16 @@ public class VirtualPet {
             System.out.println("1. Start");
             System.out.println("2. Instructions");
             System.out.println("3. Exit");
-            System.out.println("Please select an option from the menu");
-              String menuInput = kb.nextLine().toLowerCase();
+            System.out.println("\n------------------------------------------------------");
+            System.out.println("\nPlease select an option from the menu");
+            String menuInput = kb.nextLine().toLowerCase();
+            System.out.println("\n------------------------------------------------------");
             switch (menuInput){
            //game
               //print animals and asks user for choice of adoption
                 case "1":
                 case "start":
-                 System.out.println("Please select the pet you'd like to adopt: ");
+                 System.out.println("\nPlease select the pet you'd like to adopt: ");
                  System.out.println("         ,");
                  System.out.println("        /|      __");
                  System.out.println("       / |   ,-~ /");
@@ -63,13 +65,14 @@ public class VirtualPet {
                  System.out.println(" l       I     !"+"              "+"     ||  \\\\       |||");
                  System.out.println(" ]\\      _\\    /\"\\"+"        "+"         )\\   )\\      )||");
                  System.out.println("(\" ~----( ~   Y.  )"+"          "+"        `\"   `\"    `\"\"");
-                 System.out.println("____________________________________________________________");
+                 System.out.println("\n------------------------------------------------------");
                  System.out.println("\n    OPTION 1      "+"                       OPTION 2      ");
                  System.out.println("    BUNNY    "+"                                DEER");
-                 System.out.println("____________________________________________________________");
+                 System.out.println("\n------------------------------------------------------");
               
                  String animalChoice = kb.nextLine();
                     if (animalChoice.equals ("1")|| animalChoice.equalsIgnoreCase("bunny")){
+                    System.out.println("------------------------------------------------------");
                     System.out.println("You have chosen to adopt a bunny! Congradulations!");
                     System.out.println("         ,");
                     System.out.println("             /|      __");
@@ -92,8 +95,8 @@ public class VirtualPet {
                     System.out.println("     (\" ~----( ~   Y.  )");
                      }
                     else if (animalChoice.equals ("2")|| animalChoice.equalsIgnoreCase("deer")){
+                    System.out.println("------------------------------------------------------");
                     System.out.println("You have chosen to adopt a deer! Congradulations!");
-                    System.out.println("         ,");
                     System.out.println("                 .\\     _,");
                     System.out.println("                  |`\\__/ /");
                     System.out.println("                  \\  . .(");
@@ -135,6 +138,9 @@ public class VirtualPet {
               
                     break;   
             }
+          }
+          else{
+              System.out.println("Invalid username or password.");
           }
     }
 }
