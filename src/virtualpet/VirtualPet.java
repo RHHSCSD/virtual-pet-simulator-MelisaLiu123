@@ -254,22 +254,35 @@ public class VirtualPet {
                         }
                         else if(gameChosen ==2){
                        //matching game
-                            StringBuilder pairBuilder=new StringBuilder();
+                            StringBuilder pairsBuilder=new StringBuilder();
                             String alphabet = "abcdedefghijklmnopqrstuvwxyz";
                             for (int i = 0; i<10; i++){
                                 char letter = alphabet.charAt(random.nextInt(alphabet.length()));
-                                pairBuilder.append(letter).append(letter);
+                                pairsBuilder.append(letter).append(letter);
                             }
-                            String pairs = pairBuilder.toString();
+                            String pairs = pairsBuilder.toString();
                             String shufflePairs = shuffleString(pairs);
                             int totalPairs = pairs.length()/2;
                             int pairsFound = 0;
                             int guesses = 0;
                             int score = 100;
                             System.out.println("Welcome to the matching game!");
-                            System.out.println("Find all the pairs of letters");
+                            System.out.println("Find all the pairs of letters!");
+                            
+                            StringBuilder hiddenPairsBuilder = hiddenPairsBuilder.toString();
+                            for(int i=0; i<shuffledPairs.length(); i++){
+                                hiddenPairsBuilder.append('X');
+                            }
+                            String hiddenPair = hiddenPairsBuilder.toString();
+                            while (pairsFound<totalPairs){
+                                System.out.println("Hidden sequence: "+hiddenPair);
+                                System.out.println("Enter 2 positions 0-10");
+                            }
+                            
+                            
+                            
                        
-                       break;
+                            break;
                         }
                         else{
                             System.out.println("Invalid input.");
